@@ -156,6 +156,10 @@ body {
   .card-cta {
     margin-top: 3rem;
   }
+
+  .attribution {
+    grid-column: unset;
+  }
 }
 
 @media (max-width: 34em) {
