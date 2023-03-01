@@ -39,6 +39,25 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.attribution {
+  grid-column: 2;
+  text-align: center;
+  color: #555;
+  font-size: 1.337rem;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--primary-orange);
+  text-decoration: underline;
+}
+
 .card {
   padding: 5rem;
   border-radius: .6rem;
