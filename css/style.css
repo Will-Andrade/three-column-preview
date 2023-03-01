@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
 :root {
-  --primary-orange: #e38826;
-  --primary-cyan: #006970;
-  --primary-dark-cyan: #004241;
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-cyan: hsl(184, 100%, 22%);
+  --primary-dark-cyan: hsl(179, 100%, 13%);
 
-  --white-text: rgba(255, 255, 255, 0.75);
-  --light-gray: #f2f2f2;
+  --white-text: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
 }
 
 *,
@@ -27,12 +27,14 @@ body {
   font-weight: 400;
   color: #fff;
   background: var(--light-gray);
+
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
 
 .card-container {
-  width: 100vw;
-  padding: 20rem 40rem;
-
+  max-width: 112rem;
   display: grid;
   place-content: center;
   grid-template-columns: repeat(3, 1fr);
@@ -130,28 +132,23 @@ body {
   outline: .2rem solid var(--light-gray);
 }
 
-@media (max-width: 92em) {
-  .card-container {
-    padding: 10rem 20rem;
-  }
-}
-
 @media (max-width: 65em) {
-  .card-container {
-    padding: 5rem 10rem;
-  }
-
   .card-content {
     font-size: 1.85rem;
   }
 }
 
-@media (max-width: 44em) {
+@media (max-width: 48.625em) {
+  body {
+    padding: 2rem;
+  }
+
   .card-container {
     grid-template-columns: 1fr;
-    height: auto;
-    width: 100%;
-    padding: 2rem 4rem;
+  }
+
+  .card-content {
+    font-size: 1.85rem;
   }
 
   .card-title {
@@ -168,10 +165,6 @@ body {
 }
 
 @media (max-width: 34em) {
-  .card-container {
-    padding: 1rem 2rem;
-  }
-
   .card-cta {
     font-size: 1.4rem;
     margin-top: 0;
