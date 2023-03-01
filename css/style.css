@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --primary-orange: #e38826;
+  --primary-cyan: #006970;
+  --primary-dark-cyan: #004241;
+
+  --white-text: rgba(255, 255, 255, 0.75);
+  --light-gray: #f2f2f2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  background: var(--light-gray);
+}
+
+.card-container {
+  height: 90vh;
+  width: 100vw;
+  padding: 20rem 40rem;
+
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 5rem;
+  border-radius: .6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.4rem;
+}
+
+.card.sedans {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background: var(--primary-orange);
+}
+
+.card.suvs {
+  border-radius: 0;
+  background: var(--primary-cyan);
+}
+
+.card.luxury {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: var(--primary-dark-cyan);
+}
+
+.card-title {
+  font-size: 4.4rem;
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--light-gray);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-content {
+  font-size: 1.95rem;
+  line-height: 1.4;
+  color: var(--white-text);
+}
+
+.card-cta {
+  padding: 1.5rem 3rem;
+  margin-top: 6rem;
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  
+  display: inline-block;
+  background: var(--light-gray);
+}
+
+.sedans .card-cta{
+  color: var(--primary-orange);
+}
+
+.suvs .card-cta {
+  color: var(--primary-cyan);
+}
+
+.luxury .card-cta {
+  color: var(--primary-dark-cyan);
+}
+
+.card-cta:hover,
+.card-cta:active{
+  background: transparent;
+  color: var(--light-gray);
+  outline: .2rem solid var(--light-gray);
+}
+
+@media (max-width: 86em) {
+  .card-container {
+    padding: 10rem 15rem;
+  }
+
+  .card-content {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .card-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 100%;
+    padding: 2rem 4rem;
+  }
+
+  .card-title {
+    font-size: 4rem;
+  }
+
+  .card-cta {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .card-container {
+    padding: 1rem 2rem;
+  }
+
+  .card-cta {
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+}
