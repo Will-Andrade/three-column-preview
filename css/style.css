@@ -130,9 +130,15 @@ body {
   outline: .2rem solid var(--light-gray);
 }
 
-@media (max-width: 86em) {
+@media (max-width: 92em) {
   .card-container {
-    padding: 10rem 15rem;
+    padding: 10rem 20rem;
+  }
+}
+
+@media (max-width: 65em) {
+  .card-container {
+    padding: 5rem 10rem;
   }
 
   .card-content {
